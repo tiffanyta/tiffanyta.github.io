@@ -36,3 +36,29 @@ h1{
 	top: 85%;
 	right:10%;
 }
+
+.blue {
+	background-color: #0000ff;
+}
+
+.red {
+	background-color: #ff0000;
+}
+
+.button1 {
+	width: 50px;
+	height: 50px;
+	z-index: 10;
+	position:fixed;
+	bottom: 0;
+	left: 0;
+}
+
+.button2 {
+	width: 50px;
+	height: 50px;
+	z-index: 10;
+	position:fixed;
+	bottom: 0;
+	left: 50;
+}
