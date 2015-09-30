@@ -1,0 +1,38 @@
+h1{
+	color:#FF00FF;
+	font-family: Helvetica, Arial;
+
+}
+
+.mydiv {
+	width: 400px;
+	background-color: #9a3456;
+	color: white;
+	border: dashed 3px black;
+	padding: 5px;
+	margin: 20px;
+}
+
+.mydiv p{
+	color: #999999;
+}
+
+.relative {
+	position: relative;
+	left: 200px;
+}
+
+.fixed {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	margin: 0;
+	opacity: 0.5;
+}
+
+.absolute{
+	positon: absolute;
+	top: 85%;
+	right:10%;
+}
