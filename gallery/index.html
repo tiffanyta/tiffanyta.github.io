@@ -1,0 +1,43 @@
+<html>
+<head>
+	<title>Tiff's Gallery</title>
+</head>
+
+<link rel="stylesheet" type="text/css" href="styles/styles.css">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+<body>
+
+	<div class="wrapper">
+
+	<h1>MY GALLERY</h1>
+	<p>Here are some of my sketches.</p>
+
+<!-- 	Placing pde sketches-->	
+	<canvas data-processing-sources="sketches/sketch1/sketch1.pde" id ="firstsketch"></canvas>
+
+	<canvas data-processing-sources="sketches/sketch2/sketch2.pde" class="hidden" id = "secondsketch"></canvas>
+
+	<canvas data-processing-sources="sketches/sketch3/sketch3.pde sketches/sketch3/ball.pde" class = "hidden" id ="thirdsketch"></canvas>
+
+	<canvas data-processing-sources="sketches/sketch4/sketch4.pde sketches/sketch4/HYPE.pde" class = "hidden" id ="fourthsketch"></canvas>
+
+<!-- Navigation -->
+	<ul>
+		<li id ="one" class="selected"><p>1</p></li>
+		<li id ="two" ><p>2</p></li>
+		<li id = "three" ><p>3</p></li>
+		<li id = "four" ><p>4</p></li>
+
+	</ul>
+<!-- End wrapper div -->
+</div> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/processing.js"></script>
+
+<script type="text/javascript" src="scripts/scripts.js"></script>
+
+</body>
+
+
+
+</html>
