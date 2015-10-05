@@ -1,60 +1,60 @@
-//From Day 1 of Processing for Fall 2015 Immersive
-//written by Sarah Wever
-//
-//covers:
-//2d drawing, animation
-
-//declare any variables we plan to use
-float x;
-float y;
-float xspeed;
-float yspeed;
-
+HSwarm swarm;
+HDrawablePool pool;
+HTimer timer;
 
 void setup() {
-  //setup will run once at the beginning of our program
-  //we will write things here that we only want to run in the first frame
+	size(650,300);
+	H.init(this).background(#ffffff).autoClear(false);
+	smooth();
 
-  //set size of screen (in pixels) and background color
-  size(600, 350);
-  
+	swarm = new HSwarm()
+		.addGoal(H.mouse())
+		.speed(3)
+		.turnEase(0.1f)
+		.twitch(1)
+	;
 
-  //starting point for our ball and bounce speed
-  x = width/2;
-  y = height/2;
-  xspeed = 1;
-  yspeed = 3;
+	pool = new HDrawablePool(40);
+	pool.autoAddToStage()
+		.add (
+			new HRect()
+			.rounding(4)
+			
+		)
+
+		.colorist(new HColorPool(#234D20, #36802D, #77AB59, #C9DF8A, #F0F7DA).fillOnly())
+
+		.onCreate (
+			new HCallback() {
+				public void run(Object obj) {
+					HDrawable d = (HDrawable) obj;
+					d
+						.size((int)random(1,4), (int)random(10,30) )
+						//.strokeWeight(2)
+						.noStroke()
+						.loc( 0,0)
+						.anchorAt( H.CENTER )
+					;
+
+					swarm.addTarget(d);
+				}
+			}
+		)
+	;
+
+	timer = new HTimer()
+		.numCycles( pool.numActive() )
+		.interval(250)
+		.callback(
+			new HCallback() { 
+				public void run(Object obj) {
+					pool.request();
+				}
+			}
+		)
+	;
 }
 
 void draw() {
-  //this will loop constanltly once the program has started
-  //LPT: order is important
-
-  //redeclare background color so we don't get trails from our ball
-  background(255,255,0);
-
-  //no stroke, purple ball
-  noStroke();
-  fill(255, 0, 255);
-
-  //set x and y location to increase by the value of speed with every frame
-
-  y = y + yspeed;
-  x = x + xspeed;
-
-  //if the ball goes off any side of the screen:
-  //multiply the speed by it's inverse to have it reverse direction
-  if (y > height-25 || y < 25) {
-    yspeed = yspeed * -1;
-  }
-
-  if (x > width-25 || x < 25) {
-    xspeed = xspeed * -1;
-  }
-
-
-
-
-  //draw our circle
-  ellipse(x, y, 50, 50);
+	H.drawStage();
 }
