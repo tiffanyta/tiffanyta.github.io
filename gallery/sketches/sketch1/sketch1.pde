@@ -11,7 +11,7 @@ float fx;
 float fy;
 
 void draw() {
-  background(255);
+  background(240);
 
   // jim
   x = mouseX;
