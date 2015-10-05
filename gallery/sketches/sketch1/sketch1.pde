@@ -1,5 +1,5 @@
 void setup() {
-  size(720, 720);
+  size(600, 350);
 }
 
 float x;
