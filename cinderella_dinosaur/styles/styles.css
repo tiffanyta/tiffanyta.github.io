@@ -1,0 +1,162 @@
+body {
+  font-family: Helvetica, sans-serif;
+  margin: 0;
+
+  background-color: #147a5f;
+
+  color: #eaeaea;
+}
+
+p {
+  margin: 0;
+}
+
+.verse {
+  width: 100%;
+  font-size: 40px;
+  box-sizing: border-box;
+  padding: 200px 100px;
+}
+
+
+/* lay out image and p next to each other */
+.verse img, .verse p {
+  display: inline;
+}
+.verse img {
+  width: 30%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.verse p {
+  width: 75%;
+}
+
+.one {
+  background-color: #147a5f;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 0px;
+  text-align: center;
+}
+.one img{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 50%;
+  margin-top: 0;
+}
+
+
+.two {
+  background-color: #4a5746;
+}
+
+.two p {
+  padding-top: 200px;
+}
+
+.two img{
+  width: 30%;
+  float: left;
+  margin: 0;
+  padding-right: 50px;
+}
+
+.three {
+  background-color: #69512f;
+}
+
+.three img{
+  display: block;
+  width: 30%;
+  float: right;
+}
+
+.four {
+  background-color: #783d2d;
+}
+
+
+
+.four img {
+  float: left;
+  width: 40%;
+  margin: 0;
+}
+
+.five {
+  background-color: #53382d;
+}
+
+.five img{
+  float: left;
+  margin: 0;
+}
+.six {
+  background-color: #147a5f;
+  text-align: center;
+}
+
+.six img{
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  width: 30%;
+  padding-bottom: 25px;
+}
+
+.seven {
+  font-size: 50px;
+  background-color: #4a5746;
+}
+
+.seven img {
+  float: right;
+  width: 40%;
+  padding-left:25px;
+}
+
+.eight {
+  background-color: #69512f;
+  padding-top: 100px;
+}
+
+.eight p {
+  padding-top: 100px;  
+}
+
+.eight img{
+  float: left;
+  width: 30%;
+  margin: -50px;
+  padding-right: 50px;
+
+  }
+
+.nine {
+  background-color: #53382d;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.nine img {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  width: 60%;
+  padding-bottom: 50px;
+}
+
+.ten{
+  text-align: center;  
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.ten img {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
