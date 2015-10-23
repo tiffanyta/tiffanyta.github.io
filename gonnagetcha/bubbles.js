@@ -25,9 +25,9 @@ function Bubble(x, y) {
     }
 
   this.display = function() {
-    stroke(255,10);
+    noFill();
     
-    fill(this.col);
+    noStroke();
     var face = ellipse(this.x, this.y, this.r *2, this.r *2);
     fill(255);
     var eyeL = ellipse(this.x - this.r/2, this.y , this.r/2 , this.r/3 );
