@@ -16,7 +16,7 @@ function draw_rotating_rectangle(x, y, rect_size, r) {
   this.r = r;
   translate(x, y);
   rotate(r);
-  fill(0,255,255);
+  fill(0,255,255,150);
   rect(0, 0, rect_size, rect_size);
   resetMatrix();
 }
@@ -34,7 +34,7 @@ function draw() {
     while (y < 30) { 
       // we give a unique rotation amount to each rectangle, depending
       // on which column and row the rectangle is located (x and y)
-      draw_rotating_rectangle(50 + x * 40, 50 + y * 30, 16, rot + x + y);
+      draw_rotating_rectangle(x*50+10, y*50+10, sqrt(pow(mouseX-x*50,2)+pow(mouseY-y*50,2))/10, x+y );
       y = y + 1;
     }
     x = x + 1;
